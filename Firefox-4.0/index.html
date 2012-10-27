@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Basic Firebug Swarm from the Firebug Team</title>
+        <meta http-equiv="content-type" content="text/html;charset=utf-8" />
+        <link rel="stylesheet" href="../common/swarmExtensionStatus.css" type="text/css"/>
+        <link rel="stylesheet" href="../common/swarm.css" type="text/css"/>
+        <script type="text/javascript" src="../common/swarm.js"></script>
+    </head>
+    <body>
+        <table id="header">
+            <tbody>
+                <tr>
+                    <td>
+                        <a href="http://getfirebug.com/" target="_blank"><img class="logo" src="http://getfirebug.com/img/firebug-logo.png"/></a>
+                    </td>
+                    <td>
+                        <a href="http://getfirebug.com/contribute" target="_blank">
+                            <div id="contribute">
+                                Support Firebug<br>
+                                <span>Become a Corporate Sponsor</span>
+                            </div>
+                        </a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="swarmpicker">
+            <form id="swarmSelector">
+                <div class="swarmSelector">
+                    <input type="checkbox" id="basicSwarm" name="swarms" value="basic" checked="true" /> <label for="basicSwarm">Basic Extensions, includes Firebug</label>
+                </div>
+                <div class="swarmSelector">
+                    <input type="checkbox" id="designerSwarm" name="swarms" value="designer" /> <label for="designerSwarm">Designer Extensions</label>
+                </div>
+                <div class="swarmSelector">
+                    <input type="checkbox" id="developerSwarm" name="swarms" value="developer" /> <label for="developerSwarm">Developer Extensions</label>
+                </div>
+                <div class="swarmSelector">
+                    <input type="checkbox" id="performanceSwarm" name="swarms" value="performance" /> <label for="performanceSwarm">Performance Extensions</label>
+                </div>
+                <div class="swarmSelector">
+                    <input type="checkbox" id="labsSwarm" name="swarms" value="labs" /> <label for="labsSwarm">Firebug Labs Extensions</label>
+                </div>
+                <button class="swarmCommand blue-pill" id="installSelected">Install The Swarm!</button><br><span id="extensionsSelected"></span>
+            </form>
+        </div>
+        <div class="swarmSpecification">
+            <div class="theSwarm"> <!-- One item for every extension in the Swarm -->
+               <form id="extensionSelector">
+                    <div class="extension basic developer designer performance">
+                        <input type="checkbox" class="installThisOne" name="extension" value="tbd" />
+                        <a class="extensionURL" href="https://getfirebug.com/releases/firebug/1.7/firebug-1.7.3.xpi" id="firebug@software.joehewitt.com">Firebug</a>
+                        <span class="extensionAuthor">The Firebug Working Group</span>
+                        <span class="extensionStatus">1.7.3</span>
+                        <div class="extensionInfo">
+                            <p>
+                                The Firebug Web Page Debugger, Firefox version
+                                <a class="extensionMoreInfo" target="_blank" href="http://getfirebug.com">more info</a>
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Eventbug -->
+                    <div class="extension developer">
+                        <input type="checkbox" class="installThisOne" name="extension" value="tbd" />
+                        <a class="extensionURL"
+                            href="https://getfirebug.com/releases/eventbug/1.5/eventbug-0.1b9.xpi"
+                            id="eventbug@getfirebug.com">Eventbug</a>
+                        <span class="extensionAuthor">Jan 'Honza' Odvarko and John J. Barton</span>
+                        <span class="extensionStatus">0.1b9</span>
+                        <div class="extensionInfo">
+                            <p>
+                                This extension brings a new <b>Events</b> panel that lists all of the event handlers
+                                on the page grouped by event type. The panel also nicely integrates with other Firebug
+                                panels and allows to quickly find out,
+                                which HTML element is associated with specific event listener or see the Javascript source code.
+                                <a class="extensionMoreInfo" target="_blank" href="http://www.softwareishard.com/blog/firebug/eventbug-alpha-released/">more info</a>
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Firediff -->
+                    <div class="extension designer">
+                        <input type="checkbox" class="installThisOne" name="extension" value="tbd" />
+                        <a class="extensionURL"
+                            href="http://www.incaseofstairs.com/download/firediff/firediff1.1.3.xpi"
+                            hash="sha1:00860600198e7a12eae019f507f8037da961888d"
+                            id="firediff@johnjbarton.com">Firediff</a>
+                        <span class="extensionAuthor">Kevin Decker</a>
+                        <span class="extensionStatus">1.1.3</span>
+                        <div class="extensionInfo">
+                            <p>
+                                Firediff is a Firebug extension that tracks changes to a pages DOM and CSS.
+                                <a class="extensionMoreInfo" target="_blank" href="http://www.incaseofstairs.com/firediff/">more info</a>
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- SelectBug -->
+                    <div class="extension designer">
+                        <input type="checkbox" class="installThisOne" name="extension" value="tbd" />
+                        <a class="extensionURL"
+                            href="http://getfirebug.com/releases/selectbug/selectbug-0.1a3.xpi"
+                            id="getfirebug@getfirebug.com">SelectBug</a>
+                        <span class="extensionStatus">0.1a3</span>
+                        <div class="extensionInfo">
+                            <p>List elements for each CSS selector, trial CSS selectors by typing them in.</p>
+                        </div>
+                    </div>
+
+                    <!-- NetExport -->
+                    <div class="extension performance">
+                        <input type="checkbox" class="installThisOne" name="extension" value="tbd" />
+                        <a class="extensionURL"
+                            href="https://getfirebug.com/releases/netexport/netExport-0.8b17.xpi"
+                            hash="md5:7e118eaa0cd0691b7b8eee97dbffc83d"
+                            id="netexport@getfirebug.com">NetExport</a>
+                        <span class="extensionAuthor">Jan 'Honza' Odvarko</span>
+                        <span class="extensionStatus">0.8b17</span>
+                        <div class="extensionInfo">
+                            <p>
+                                Allows exporting data from the Net panel.
+                                <a class="extensionMoreInfo" target="_blank" href="http://www.softwareishard.com/blog/netexport/">more info</a>
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- FireCookie -->
+                    <div class="extension developer">
+                        <input type="checkbox" class="installThisOne" name="extension" value="tbd" />
+                        <a class="extensionURL"
+                            href="https://addons.mozilla.org/firefox/downloads/file/113498/firecookie-1.2.1-fx.xpi?src=external-Firebug-Swarm"
+                            id="firecookie@janodvarko.cz">FireCookie</a>
+                        <span class="extensionAuthor">Jan 'Honza' Odvarko</span>
+                        <span class="extensionStatus">1.2.1</span>
+                        <div class="extensionInfo">
+                            <p>
+                                View and manage cookies in your browser
+                                <a class="extensionMoreInfo" target="_blank" href="http://www.janodvarko.cz/firecookie">more info</a>
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Illuminations for Developers -->
+                    <div class="extension developer">
+                        <input type="checkbox" class="installThisOne" name="extension" value="tbd" />
+                        <a class="extensionURL"
+                            href="https://addons.mozilla.org/firefox/downloads/file/137044/illuminations_for_developers_for_firebug-1.1.10-fx.xpi?src=external-Firebug-Swarm"
+                            id="sroussey@illumination-for-developers.com">Illuminations for Developers</a>
+                        <span class="extensionAuthor">Steven Roussey</span>
+                        <span class="extensionStatus">1.1.10</span>
+                        <div class="extensionInfo">
+                            <p>
+                                Enhances Firebug to understand JavaScript libraries and frameworks (like ExtJS, Dojo Toolkit, SproutCore, Closure Library, qooxdoo, YUI3, and jQuery/jQueryUI), making things more obvious and helpful when debugging. Trial version.
+                                <a class="extensionMoreInfo" target="_blank" href="http://www.illuminations-for-developers.com/">more info</a>
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Dojo Firebug Extension -->
+                    <div class="extension developer">
+                        <input type="checkbox" class="installThisOne" name="extension" value="tbd" />
+                        <a class="extensionURL"
+                            href="http://getfirebug.com/releases/dojofirebugextension/1.7/dojofirebugextension-1.0a9.xpi"
+                            id="dojofirebugextension">Dojo Firebug Extension</a>
+                        <span class="extensionAuthor">Patricio Reyna Almandos and Fernando Gomez</span>
+                        <span class="extensionStatus">1.0a9</span>
+                        <div class="extensionInfo">
+                            <p>
+                                Easy access to Dojo features: list dijit registry, and inspect visual widgets, view and breakpoint connections and subscriptions.
+                                <a class="extensionMoreInfo" target="_blank" href="http://getfirebug.com/wiki/index.php/DojoFirebugExtension_Reference_Guide">more info</a>
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- FirePHP -->
+                    <div  class="extension developer">
+                        <input  type="checkbox"  class="installThisOne"  name="extension"  value="tbd"  />
+                        <a  class="extensionURL"
+                            href="https://addons.mozilla.org/firefox/downloads/file/102244/firephp-0.5.0-fx.xpi?src=external-Firebug-Swarm"
+                            id="FirePHPExtension-Build@firephp.org">FirePHP</a>
+                        <span class="extensionStatus">0.5.0</span>
+                        <div class="extensionInfo">
+                            <p>
+                                Log to your Firebug Console from PHP
+                                <a  class="extensionMoreInfo"  target="_blank"  href="http://www.firephp.org/">more info</a>
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- FireStarter -->
+                    <div class="extension basic">
+                        <input type="checkbox" class="installThisOne" name="extension" value="tbd" />
+                        <a class="extensionURL"
+                            href="https://getfirebug.com/releases/firestarter/1.5/fireStarter-0.1a6.xpi"
+                            id="firestarter@janodvarko.cz">FireStarter</a>
+                        <span class="extensionStatus">0.1.a6</span>
+                        <div class="extensionInfo">
+                            <p>Extends Firebug's activation model with advanced features.</p>
+                        </div>
+                    </div>
+
+                    <!-- FBTest -->
+                    <div class="extension labs">
+                        <input type="checkbox" class="installThisOne" name="extension" value="tbd" />
+                        <a class="extensionURL"
+                            href="https://getfirebug.com/releases/fbtest/1.7/fbTest-1.7b17.xpi"
+                            id="fbtest@mozilla.com">FBTest</a>
+                        <span class="extensionStatus">1.7b17</span>
+                        <div class="extensionInfo">
+                            <p>Test Driver for Firebug itself, useful for extension authors</p>
+                        </div>
+                    </div>
+                </form>
+            </div> <!-- theSwarm -->
+                
+            <h2>
+                <img src="http://getfirebug.com/images/firebug3.jpg" alt=""/>
+                <span class="date">
+                    <a href="http://getfirebug.com/testresults/?userheaderid=75586fa2adea86670c7c8094021ebc95"><i>Tested with Firebug </i></a>
+                </span>
+            </h2>
+        </div> <!-- swarmSpecification -->
+    </body>
+</html>

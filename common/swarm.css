@@ -1,0 +1,273 @@
+html {
+	min-height: 100%;
+}
+
+ol {
+    padding-right: 40px;
+}
+
+body {
+    font-family:"trebuchet ms",helvetica,sans-serif;
+}
+
+h2 {
+    position: absolute;
+    bottom: 0;
+}
+
+#contribute {
+   text-align: center;
+}
+
+#contribute span {
+   font-size: small;
+}
+
+#header {
+    width: 100%;
+    padding: 5px 5px 5px 190px;
+}
+
+.logo {
+    border: none;
+}
+
+body {
+    margin: 10px;
+    background-repeat: no-repeat;
+    background-image: -moz-linear-gradient(center top , #E7EDF6 3px, rgba(231, 237, 246, 0) 156px), -moz-linear-gradient(left center , rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0) 40%, rgba(255, 255, 255, 0) 60%, rgba(255, 255, 255, 0.2)), -moz-linear-gradient(left center 32deg, rgba(255, 255, 255, 0) 19.5%, rgba(255, 255, 255, 0.1) 20%, rgba(255, 255, 255, 0.1) 21.5%, rgba(255, 255, 255, 0.2) 22%, rgba(255, 255, 255, 0.2) 25.5%, rgba(255, 255, 255, 0.1) 26%, rgba(255, 255, 255, 0.1) 27.5%, rgba(255, 255, 255, 0) 28%, rgba(255, 255, 255, 0) 49.5%, rgba(255, 255, 255, 0.1) 50%, rgba(255, 255, 255, 0.1) 52.5%, rgba(255, 255, 255, 0.2) 53%, rgba(255, 255, 255, 0.2) 54.5%, rgba(255, 255, 255, 0.1) 55%, rgba(255, 255, 255, 0.1) 57.5%, rgba(255, 255, 255, 0) 58%, rgba(255, 255, 255, 0) 87%, rgba(255, 255, 255, 0.2) 90%);
+    background-color: #CCD9EA;
+}
+
+.swarmpicker {
+    margin-top: 20px;
+    width: 300px;
+    float: left;
+}
+
+.swarmSpecification {
+    position: absolute;
+    top: 100px;
+    left: 310px;
+    bottom: 0;
+    right: 10px;
+}
+
+.theSwarm {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 70px;
+    right: 0;
+    border: 1px solid #C3CEDF;
+    border-radius: 5px 5px 5px 5px;
+    background-image: -moz-linear-gradient(center top , rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.3));
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+.swarmCommand {
+    margin: 10px 0 10px 50px;
+}
+
+.extension {
+    -moz-border-bottom-colors: rgba(255, 255, 255, 0.1);
+    -moz-border-top-colors: rgba(0, 0, 0, 0.1) rgba(255, 255, 255, 0.1);
+    background-origin: border-box;
+    border-bottom: 1px solid;
+    border-top: 2px solid;
+    color: black;
+    padding: 5px;
+}
+.theSwarm .extension:first-of-type {
+    -moz-border-top-colors: rgba(255, 255, 255, 0.1);
+    border-top-width: 1px;
+}
+
+.theSwarm .extension:last-of-type {
+    -moz-border-bottom-colors: rgba(0, 0, 0, 0.1) rgba(255, 255, 255, 0.1);
+    border-bottom-width: 2px;
+}
+
+#extensionsSelected {
+    margin: 10px 0 10px 50px;
+}
+
+.swarmSelector {
+    background-repeat: repeat-x;
+}
+
+.swarmSelector label {
+    display: block;
+    float: right;
+    width: 275px;
+}
+
+.selected {
+    background-image: -moz-linear-gradient(bottom, rgba(242, 111, 45, 0.7), rgba(252, 176, 64, 0.7), rgba(250, 232, 174, 0.7));
+}
+
+.swarmSelector:not(.selected):hover {
+    background-image: -moz-linear-gradient(bottom, rgba(242, 111, 45, 0.3), rgba(252, 176, 64, 0.3), rgba(250, 232, 174, 0.3));
+}
+
+:not(.selected).inSwarm {
+    background-image: -moz-linear-gradient(bottom, rgba(242, 111, 45, 0.3), rgba(252, 176, 64, 0.3), rgba(250, 232, 174, 0.3));
+    background-repeat: repeat-x;
+}
+
+.extensionAuthor:before {
+   content: "by ";
+}
+
+.extensionURL {
+   font-weight: bold;
+}
+
+.extensionHash {
+   display: none;
+}
+.extensionInfo {
+	font-size: small;
+}
+
+.extensionMoreInfo {
+   float: right;
+}
+
+.certificationTests {
+   padding-left: 40px;
+}
+
+/* status */
+.extensionStatus {
+   float: right;
+   font-weight: bold;
+   color: #FF9933;
+}
+
+.extensionStatus:before {
+    content: "Version "
+}
+
+.installedVersion-None:after {
+    content: " not installed";
+}
+
+.installedVersion-Same:after {
+    content: ", already installed";
+    color: green;
+}
+
+.installedVersion-Older:after {
+    content: " older version installed";
+}
+
+.installedVersion-Newer:after {
+    content: " newer version installed";
+}
+
+.installing-download_start:after {
+    content: " download started";
+}
+
+.installing-download_start:after {
+    content: " download complete";
+    color: blue;
+}
+
+.installing-download_done:after {
+    content: " download complete";
+    color: green;
+}
+
+.installing-install_start:after {
+    content: " install started";
+    color: blue;
+}
+
+.installing-install_done:after {
+    content: " install complete";
+    color: green;
+}
+
+.install-failed {
+    color: red;
+}
+
+.installNotAllowed {
+    color: red;
+}
+
+.installNotAllowed:after {
+    color: red;
+    content: " install blocked";
+}
+
+.buildableExtension:after {
+    color: red;
+    content: " buildable";
+}
+
+.swarmInstall {
+    display: none;
+    margin-left: auto;
+    margin-right: auto;
+    font-weight: bold;
+    color: #FF9933;
+}
+
+/* Overall toggle */
+button.swarmInactive:after {
+    content: "Show Swarm";
+}
+
+
+/* from: https://github.com/ubuwaits/css3-buttons/blob/gh-pages/css/buttons.css
+*******************************************************************************/
+button.blue-pill {
+    background: #a5b8da;
+    background: -moz-linear-gradient(top, #a5b8da 0%, #7089b3 100%);
+    background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#a5b8da), to(#7089b3));
+    border-top: 1px solid #758fba;
+    border-right: 1px solid #6c84ab;
+    border-bottom: 1px solid #5c6f91;
+    border-left: 1px solid #6c84ab;
+    -moz-border-radius: 18px;
+    -webkit-border-radius: 18px;
+    border-radius: 18px;
+    -moz-box-shadow: inset 0 1px 0 0 #aec3e5;
+    -webkit-box-shadow: inset 0 1px 0 0 #aec3e5;
+    box-shadow: inset 0 1px 0 0 #aec3e5;
+    color: #fff;
+    font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
+    font-size: 11px;
+    font-weight: bold;
+    line-height: 1;
+    padding: 8px 0 8px 0;
+    text-align: center;
+    text-shadow: 0 -1px 1px #64799e;
+    text-transform: uppercase;
+    width: 150px;
+}
+
+button.blue-pill:hover {
+    background: #9badcc;
+    background: -moz-linear-gradient(top, #9badcc 0%, #687fa6 100%);
+    background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#9badcc), to(#687fa6));
+    border-top: 1px solid #6d86ad;
+    border-right: 1px solid #647a9e;
+    border-bottom: 1px solid #546685;
+    border-left: 1px solid #647a9e;
+    -moz-box-shadow: inset 0 1px 0 0 #a5b9d9;
+    -webkit-box-shadow: inset 0 1px 0 0 #a5b9d9;
+    box-shadow: inset 0 1px 0 0 #a5b9d9;
+    cursor: pointer;
+}
+
+button.blue-pill:active {
+    border: 1px solid #546685;
+    -moz-box-shadow: inset 0 0 8px 2px #7e8da6, 0 1px 0 0 #eee;
+    -webkit-box-shadow: inset 0 0 8px 2px #7e8da6, 0 1px 0 0 #eee;
+    box-shadow: inset 0 0 8px 2px #7e8da6, 0 1px 0 0 #eee;
+}

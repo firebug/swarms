@@ -1,0 +1,101 @@
+<?xml version="1.0" ?>
+
+<!-- -->
+<project name="swarmTest" basedir="." default="bootstrapTest">
+
+    <!-- Directories -->
+    <property name="build.dir" value="../../build"/>
+
+    <!-- Properties -->
+    <property name="firefoxVersion" value="Firefox-4.0"/>
+    <!-- firefox.properties must provide property |firefox| value the full .exe name -->
+    <property file="${firefoxVersion}/firefox.properties"/>
+
+    <property file="${firefoxVersion}/swarm.properties"/>
+    <property file="ant.properties"/>
+
+    <!-- If the local.properties does not give a server, then default wins -->
+    <property name="testListServer" value="https://getfirebug.com"/>
+    <makeurl file="${basedir}/.." property="swarmServer"/>
+
+    <target name="clean">
+        <delete dir="${build.dir}/profile"/>
+        <mkdir dir="${build.dir}/profile"/>
+        <mkdir dir="${build.dir}/profile/extensions"/>
+    </target>
+
+    <target name="allFirefoxDirs">
+        <!-- Ant is extremely lame as far as I can tell -->
+            <antcall target="test">
+                <param name="firefoxVersion" value="./Firefox-3.6"/>
+            </antcall>
+    </target>
+
+    <target name="alreadyInstalledSwarm" if="firefox.exists">
+        <available property="annotations.exist" file="${build.dir}/profile/firebug/annotations.json" />
+    </target>
+
+    <target name="alreadyInstalledFirefox">
+        <available property="firefox.exists" file="${firefox}" />
+    </target>
+
+    <target name="firefoxInstall" unless="$firefox.exists">
+        <echo message="Set property 'firefox=_exe name_' with forward slashes in ${basedir}/${firefoxVersion}/firefox.properties"/>
+    </target>
+
+    <target name="installSwarm" depends="alreadyInstalledSwarm"  if="firefox.exists" unless="annotations.exist">
+        <!-- pre-install some preferences to avoid popup stuff during install run -->
+         <copy file="user.js" todir="${build.dir}/profile"/>
+        <!-- pre-install the link to the swarm extension -->
+        <echo file="${build.dir}/profile/extensions/swarms@getfirebug.com" message="${basedir}\.."/>
+        <exec executable="${firefox}">
+            <arg value="-no-remote"/>
+            <arg value="-profile"/>
+             <arg value="${build.dir}/profile"/>
+        </exec>
+    </target>
+
+    <target name="bootstrapTest" depends="clean, alreadyInstalledFirefox, installSwarm" if="firefox.exists">
+       <echo message="done?"/>
+    </target>
+
+    <target name="test" depends="alreadyInstalledFirefox, firefoxInstall, installSwarm" if="firefox.exists">
+        <!-- first wait for the install to begin -->
+        <waitfor maxwait="10" maxwaitunit="minute">
+            <available file="${build.dir}/profile/extensions/firebug@software.joehewitt.com.xpi"/>
+        </waitfor>
+        <!-- then wait for the install process to exit -->
+        <waitfor maxwait="10" maxwaitunit="minute">
+            <not>
+                <available file="${build.dir}/profile/parent.lock"/>
+            </not>
+        </waitfor>
+        <exec executable="${firefox}"  output="${build.dir}/fbtestOutput.txt">
+            <arg value="-no-remote"/>
+            <arg value="-jsconsole"/>
+            <arg value="-profile"/>
+            <arg value="${build.dir}/profile"/>
+            <arg value="-runFBTests"/>
+            <arg value="${testListServer}/${testlist}"/>
+        </exec>
+    </target>
+
+    <target name="just-launch-ff" depends="alreadyInstalledFirefox, firefoxInstall, installSwarm" if="firefox.exists">
+            <!-- first wait for the install to begin -->
+            <waitfor maxwait="10" maxwaitunit="minute">
+                <available file="${build.dir}/profile/extensions/firebug@software.joehewitt.com.xpi"/>
+            </waitfor>
+            <!-- then wait for the install process to exit -->
+            <waitfor maxwait="10" maxwaitunit="minute">
+                <not>
+                    <available file="${build.dir}/profile/parent.lock"/>
+                </not>
+            </waitfor>
+            <exec executable="${firefox}" output="${build.dir}/justLaunchFF.txt">
+                <arg value="-no-remote"/>
+                <arg value="-profile"/>
+                <arg value="${build.dir}/profile"/>
+            </exec>
+        </target>
+
+</project>
