@@ -29,13 +29,13 @@
         new extension(
             'firebug@software.joehewitt.com',
             'Firebug',
-            '1.10.5',
+            '1.11.4',
             'The Firebug Working Group',
             'http://getfirebug.com/img/firebug-tiny.png',
             'The Firebug Web Page Debugger, Firefox version',
             'http://getfirebug.com',
             array('basic', 'designer', 'developer', 'performance', 'labs'),
-            'https://addons.mozilla.org/firefox/downloads/file/173628/firebug-1.10.5-fx.xpi?src=external-Firebug-Swarms'
+            'https://addons.mozilla.org/firefox/downloads/file/209674/firebug-1.11.4-fx.xpi?src=external-Firebug-Swarms'
         ),
         new extension(
             'eventbug@getfirebug.com',
@@ -76,7 +76,7 @@
         new extension(
             'sroussey@illumination-for-developers.com',
             'Illuminations for Developers for Firebug',
-            '1.1.22',
+            '1.1.26',
             'Steven Roussey',
             '',
             'Enhances Firebug to understand JavaScript libraries and frameworks (like ExtJS, '.
@@ -84,7 +84,7 @@
                 'making things more obvious and helpful when debugging. Trial version.',
             'http://www.illuminations-for-developers.com/',
             array('developer'),
-            'https://addons.mozilla.org/firefox/downloads/file/170100/illuminations_for_developers_for_firebug-1.1.22-fx.xpi?src=external-Firebug-Swarms'
+            'https://addons.mozilla.org/firefox/downloads/file/221174/illuminations_for_developers_for_firebug-1.1.26-fx.xpi?src=external-Firebug-Swarms'
         ),
         new extension(
             'dojo@silvergate.ar.ibm.com',
@@ -101,24 +101,24 @@
         new extension(
             'FirePHPExtension-Build@firephp.org',
             'FirePHP',
-            '0.7.1',
+            '0.7.2',
             'Christoph Dorn',
             '',
             'Log to your Firebug Console from PHP.',
             'http://www.firephp.org/',
             array('developer'),
-            'https://addons.mozilla.org/firefox/downloads/file/148319/firephp-0.7.1-fx.xpi?src=external-Firebug-Swarms'
+            'https://addons.mozilla.org/firefox/downloads/file/203102/firephp-0.7.2-fx.xpi?src=external-Firebug-Swarms'
         ),
         new extension(
             'fbtest@mozilla.com',
             'FBTest',
-            '1.10b7',
+            '1.11.2',
             'The Firebug Working Group',
             '',
             'Test Driver for Firebug itself, useful for extension authors.',
             '',
             array('labs'),
-            'https://getfirebug.com/releases/fbtest/1.10/fbTest-1.10b7.xpi?src=Firebug-Swarms'
+            'https://getfirebug.com/releases/fbtest/1.11/fbTest-1.11.2.xpi?src=Firebug-Swarms'
         ),
         new extension(
             'info@cssUpdater.com',
@@ -135,13 +135,13 @@
         new extension(
             'fbtrace@getfirebug.com',
             'FBTrace',
-            '1.10b3',
+            '1.11.2',
             'The Firebug Working Group',
             '',
             'Tracing Console for Firebug',
             '',
             array('labs'),
-            'https://getfirebug.com/releases/fbtrace/1.10/fbTrace-1.10b3.xpi?src=Firebug-Swarms'
+            'https://getfirebug.com/releases/fbtrace/1.11/fbTrace-1.11.2.xpi?src=Firebug-Swarms'
         )
     );
 ?>
