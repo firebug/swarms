@@ -76,7 +76,7 @@
         new extension(
             'sroussey@illumination-for-developers.com',
             'Illuminations for Developers for Firebug',
-            '1.1.27',
+            '1.1.28',
             'Steven Roussey',
             '',
             'Enhances Firebug to understand JavaScript libraries and frameworks (like ExtJS, '.
@@ -84,7 +84,7 @@
                 'making things more obvious and helpful when debugging. Trial version.',
             'http://www.illuminations-for-developers.com/',
             array('developer'),
-            'https://addons.mozilla.org/firefox/downloads/file/240450/illuminations_for_developers_for_firebug-1.1.27-fx.xpi?src=external-Firebug-Swarms'
+            'https://addons.mozilla.org/firefox/downloads/file/262108/illuminations_for_developers_for_firebug-1.1.28-fx.xpi?src=external-Firebug-Swarms'
         ),
         new extension(
             'dojo@silvergate.ar.ibm.com',
