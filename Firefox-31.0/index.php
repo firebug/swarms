@@ -29,27 +29,13 @@
         new extension(
             'firebug@software.joehewitt.com',
             'Firebug',
-            '1.12.6',
+            '2.0.4',
             'The Firebug Working Group',
             'http://getfirebug.com/img/firebug-tiny.png',
             'The Firebug Web Page Debugger, Firefox version',
             'http://getfirebug.com',
             array('basic', 'designer', 'developer', 'performance', 'labs'),
-            'https://addons.mozilla.org/firefox/downloads/file/239602/firebug-1.12.6-fx.xpi?src=external-Firebug-Swarms'
-        ),
-        new extension(
-            'eventbug@getfirebug.com',
-            'Eventbug',
-            '0.1b10',
-            'Jan \'Honza\' Odvarko and John J. Barton',
-            '',
-            'This extension brings a new <em>Events</em> panel that lists all of the event '.
-                'handlers on the page grouped by event type. The panel also nicely integrates '.
-                'with other Firebug panels and allows to quickly find out, which HTML element is '.
-                'associated with specific event listener or see the Javascript source code.',
-            'http://www.softwareishard.com/blog/firebug/eventbug-alpha-released/',
-            array('developer'),
-            'https://getfirebug.com/releases/eventbug/1.5/eventbug-0.1b10.xpi?src=Firebug-Swarms'
+            'https://addons.mozilla.org/firefox/downloads/file/274666/firebug-2.0.4-fx.xpi?src=external-Firebug-Swarms'
         ),
         new extension(
             'firediff@johnjbarton.com',
@@ -65,13 +51,13 @@
         new extension(
             'netexport@getfirebug.com',
             'NetExport',
-            '0.9b4',
+            '0.9b6',
             'Jan \'Honza\' Odvarko',
             '',
             'Allows exporting data from the Net panel.',
             'http://www.softwareishard.com/blog/netexport/',
             array('performance'),
-            'https://getfirebug.com/releases/netexport/netExport-0.9b4.xpi?src=Firebug-Swarms'
+            'https://getfirebug.com/releases/netexport/netExport-0.9b6.xpi?src=Firebug-Swarms'
         ),
         new extension(
             'sroussey@illumination-for-developers.com',
@@ -112,13 +98,13 @@
         new extension(
             'fbtest@mozilla.com',
             'FBTest',
-            '1.12b4',
+            '2.0b1',
             'The Firebug Working Group',
             '',
             'Test Driver for Firebug itself, useful for extension authors.',
             '',
             array('labs'),
-            'https://getfirebug.com/releases/fbtest/1.12/fbTest-1.12b4.xpi?src=Firebug-Swarms'
+            'https://getfirebug.com/releases/fbtest/2.0/fbTest-2.0b1.xpi?src=Firebug-Swarms'
         ),
         new extension(
             'info@cssUpdater.com',
@@ -135,13 +121,13 @@
         new extension(
             'fbtrace@getfirebug.com',
             'FBTrace',
-            '1.12b3',
+            '2.0b1',
             'The Firebug Working Group',
             '',
             'Tracing Console for Firebug',
             '',
             array('labs'),
-            'https://getfirebug.com/releases/fbtrace/1.12/fbTrace-1.12b3.xpi?src=Firebug-Swarms'
+            'https://getfirebug.com/releases/fbtrace/2.0/fbTrace-2.0b1.xpi?src=Firebug-Swarms'
         )
     );
 ?>
