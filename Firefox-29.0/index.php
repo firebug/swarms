@@ -29,13 +29,13 @@
         new extension(
             'firebug@software.joehewitt.com',
             'Firebug',
-            '1.12.6',
+            '1.12.8',
             'The Firebug Working Group',
             'http://getfirebug.com/img/firebug-tiny.png',
             'The Firebug Web Page Debugger, Firefox version',
             'http://getfirebug.com',
             array('basic', 'designer', 'developer', 'performance', 'labs'),
-            'https://addons.mozilla.org/firefox/downloads/file/239602/firebug-1.12.6-fx.xpi?src=external-Firebug-Swarms'
+            'https://addons.mozilla.org/firefox/downloads/file/252406/firebug-1.12.8-fx.xpi?src=external-Firebug-Swarms'
         ),
         new extension(
             'eventbug@getfirebug.com',
