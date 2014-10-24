@@ -176,7 +176,7 @@
                 <div class="swarmSelector">
                     <input type="checkbox" id="labsSwarm" name="swarms" value="labs" /> <label for="labsSwarm">Firebug Labs Extensions</label>
                 </div>
-                <button class="swarmCommand blue-pill" id="installSelected">Install The Swarm!</button><br><span id="extensionsSelected"></span>
+                <button class="swarmCommand blue-pill" id="installSelected">Install the Swarm!</button><br><span id="extensionsSelected"></span>
             </form>
         </div>
         <div class="swarmSpecification">
